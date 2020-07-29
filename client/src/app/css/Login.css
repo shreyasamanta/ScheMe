@@ -8,17 +8,20 @@
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
     margin: auto;
+    overflow: auto;
+    animation: animation 100s linear infinite;
 }
 
 
 .pane{
     position: relative;
     margin: 5% auto;
+    padding-bottom: 1%;
     margin-top: 100px;
-    height: 70%;
     width: 50%;
+    min-width: 800px;
+    max-width: 1000px;
     background: #fff;
     box-shadow: 0 2px 4px rgb(39, 39, 39);
     border-radius: 10px;
@@ -42,7 +45,7 @@
     font-weight: 900;
     color: #fff;
     position: absolute;
-    top: -15%;
+    top: -18%;
     left: 25%;
     width: 50%;
 }
@@ -140,6 +143,10 @@
     border-radius: 5px;
     background-color: #e5e5e5;
 }
+.log-button:hover{
+    outline: none;
+    background-color: #cacaca !important;
+}
 .log-button.left{
     float: left;
 }
@@ -210,11 +217,19 @@
     font-size: 16pt;
     color: #fff;
 
-    background-color: #3dc4e9;
-    border-color: #3dc4e9;
+    background-color: #00a3ee;
+    border: none;
+    border-color: #00a3ee;
     border-width: 1px;
-    border-radius: 10px;
     border-style: solid;
+}
+
+.signup:hover{
+    outline: none;
+    background-color: #2dbdff !important;
+    border: #ffffff !important;
+    border-width: 10% !important;
+    width: 95% !important;
 }
 
 .right-pane .info{
@@ -234,6 +249,10 @@
     border-style: solid;
 }
 
+.info:hover{
+    border-color: #ffffff !important;
+    width: 95% !important;
+}
 
 #logo{
     position: absolute;
@@ -241,3 +260,46 @@
     top: -6%;
     left: -6%;
 }
+
+
+button {
+    transition-duration: 0.4s;
+}
+button:hover{
+    font-size: 18pt !important;
+}
+.child.overflow{
+    overflow: hidden;
+}
+
+button.login:focus{
+    outline: none;
+    background-color: #ff6b6b !important;
+}
+button.login:hover{
+    outline: none;
+    background-color: #ff6b6b !important;
+    width: 95% !important;
+}
+
+input{
+    transition-duration: 0.2s;
+}
+input:focus{
+    outline: none;
+    height: -10px;
+    width: 95% !important;
+    height: 55px;
+    margin-top: 10px !important;
+    padding: 8px 16.5px 8px 16.5px !important;
+    border-width: 3px !important;
+}
+input{
+    margin-top: 15px !important;
+}
+
+@keyframes animation {
+    100%{
+     background-position:1000px -1500px;
+   }
+ }
